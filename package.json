@@ -1,7 +1,7 @@
 {
   "name": "cerebro-brew",
   "version": "0.0.1",
-  "description": "Search nd install homebrew packages",
+  "description": "Search and install homebrew packages",
   "license": "MIT",
   "repository": "luisdavim/cerebro-brew",
   "author": {
