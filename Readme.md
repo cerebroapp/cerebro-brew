@@ -1,6 +1,6 @@
 # Cerebro-Brew
 
-> It is a plugins for [Cerebro app](http://www.cerebroapp.com) that searches for homebrew formulas
+> It is a plugin for [Cerebro app](http://www.cerebroapp.com) that searches for homebrew formulas using [searchbrew.com](http://searchbrew.com/)
 
 ## Usage
 In Cerebro, type any term, and the Homebrew plugin will show some suggestions:
