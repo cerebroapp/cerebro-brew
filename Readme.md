@@ -3,7 +3,7 @@
 > It is a plugin for [Cerebro app](http://www.cerebroapp.com) that searches for homebrew formulas using [searchbrew.com](http://searchbrew.com/)
 
 ## Usage
-In Cerebro, type any term, and the Homebrew plugin will show some suggestions:
+In Cerebro, type brew followed by any term, and the Homebrew plugin will show some suggestions:
 ![](screenshot.png)
 
 <kbd>Return</kbd> - Open a terminal window with the install command entered.

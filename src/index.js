@@ -22,7 +22,18 @@ function spawnchild(pkg, code) {
   });
 }
 
+const queryFromTerm = term => {
+  const match = term.match(/^brew (.+)$/);
+  return match ? match[1].trim() : null;
+};
+
 const plugin = ({ term, actions, display }) => {
+  const query = queryFromTerm(term);
+
+  if (!query) {
+    return null;
+  }
+
   var search = (searchTerm) => {
     const q = encodeURIComponent(searchTerm)
     actions.copyToClipboard(`brew install ${q}`)
@@ -33,10 +44,10 @@ const plugin = ({ term, actions, display }) => {
   display({
     icon: icon,
     order: order, // High priority
-    title: `Search Brew For ${term}`,
-    clipboard: `brew install ${term}`,
+    title: `Search Brew For ${query}`,
+    clipboard: `brew install ${query}`,
     onSelect: () => search(term),
-    getPreview: () => <Preview query={term} key={term} search={search} />
+    getPreview: () => <Preview query={query} key={query} search={search} />
   })
 }
 
