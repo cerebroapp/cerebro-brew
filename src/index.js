@@ -52,5 +52,6 @@ const plugin = ({ term, actions, display }) => {
 }
 
 module.exports = {
-  fn: plugin
+  fn: plugin,
+  keyword: 'brew'
 }
