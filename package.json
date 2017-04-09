@@ -22,7 +22,9 @@
   "keywords": [
     "cerebro",
     "cerebro-plugin",
-    "cerebro-brew"
+    "cerebro-brew",
+	"homebrew",
+	"brew"
   ],
   "devDependencies": {
     "babel-cli": "^6.18.0",
