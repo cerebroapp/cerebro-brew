@@ -37,13 +37,14 @@
     "macos"
   ],
   "devDependencies": {
+    "@types/memoizee": "^0.4.8",
     "@types/node": "^18.11.9",
     "cerebro-build": "^1.2.0"
   },
   "dependencies": {
     "@cerebroapp/cerebro-ui": "^2.0.0-alpha.3",
-    "cerebro-tools": "^0.1.8",
-    "fzf": "^0.5.1"
+    "fzf": "^0.5.1",
+    "memoizee": "^0.4.15"
   },
   "publishConfig": {
     "access": "public"
