@@ -1,46 +1,45 @@
 {
-  "name": "cerebro-brew",
-  "version": "0.0.2",
+  "name": "@cerebroapp/cerebro-brew",
+  "version": "0.1.0",
   "description": "Search and install homebrew packages",
   "license": "MIT",
-  "repository": "luisdavim/cerebro-brew",
+  "repository": {
+    "type": "git",
+    "url": "github:cerebroapp/cerebro-brew"
+  },
   "author": {
     "name": "Luis Davim",
     "email": "luis.davim@gmail.com",
     "url": "github.com/luisdavim/"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=16"
   },
+  "os": ["darwin", "osx"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "webpack && babili dist -d dist --compact --no-comments",
-    "debug": "./scripts/debug",
-    "debug:windows": "scripts\\debug.bat",
-    "prepublish": "rimraf ./dist && npm run build"
+    "start": "cerebro-build dev",
+    "build": "cerebro-build build",
+    "prepublishOnly": "cerebro-build clear && yarn build"
   },
   "main": "dist/index.js",
   "keywords": [
     "cerebro",
     "cerebro-plugin",
     "cerebro-brew",
-	"homebrew",
-	"brew"
+    "homebrew",
+    "brew",
+    "macos"
   ],
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-loader": "^6.2.8",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babili": "0.0.9",
-    "cerebro-tools": "^0.1.0",
-    "css-loader": "^0.26.0",
-    "react": "^15.4.1",
-    "rimraf": "^2.6.1",
-    "url-loader": "^0.5.7",
-    "file-loader": "^0.10.1",
-    "style-loader": "^0.13.1",
-    "tty": "^1.0.1",
-    "child_process": "^1.0.2",
-    "webpack": "2.1.0-beta.27"
+    "@types/node": "^18.11.9",
+    "cerebro-build": "^1.2.0"
+  },
+  "dependencies": {
+    "@cerebroapp/cerebro-ui": "^2.0.0-alpha.3",
+    "cerebro-tools": "^0.1.8",
+    "fzf": "^0.5.1"
   }
 }
