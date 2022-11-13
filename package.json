@@ -15,7 +15,10 @@
   "engines": {
     "node": ">=16"
   },
-  "os": ["darwin", "osx"],
+  "os": [
+    "darwin",
+    "osx"
+  ],
   "files": [
     "dist"
   ],
@@ -41,5 +44,8 @@
     "@cerebroapp/cerebro-ui": "^2.0.0-alpha.3",
     "cerebro-tools": "^0.1.8",
     "fzf": "^0.5.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
