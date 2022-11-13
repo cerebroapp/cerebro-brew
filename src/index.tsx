@@ -1,25 +1,15 @@
-import React from 'react'
-import Preview from './Preview'
+import { Preview } from './Preview'
 import icon from './icon.png'
+import { spawn } from 'node:child_process'
+import { getSuggestions } from "./Preview/getSuggestions";
 
-const tty = require('tty');
-const child_process = require('child_process');
-
-const id = 'brew'
 const order = 1
 
-function spawnchild(pkg, code) {
-  var child = child_process.spawn('osascript', ['-e', 'tell application "Terminal" to activate', '-e', 'delay 1', '-e', 'tell application "System Events" to tell process "Terminal" to keystroke "v" using command down'], {
-    stdio: 'inherit'
-  });
-
-  child.on('error', (err) => {
-    console.log('Failed to start child process.');
-  });
-
-  child.on('exit', function(e, code) {
-    console.log("Finished");
-  });
+function spawnTerminal() {
+  spawn('osascript',
+    ['-e', 'tell application "Terminal" to activate', '-e', 'delay 1', '-e', 'tell application "System Events" to tell process "Terminal" to keystroke "v" using command down'],
+    { stdio: 'ignore' }
+  );
 }
 
 const queryFromTerm = term => {
@@ -34,10 +24,10 @@ const plugin = ({ term, actions, display }) => {
     return null;
   }
 
-  var search = (searchTerm) => {
+  const search = (searchTerm) => {
     const q = encodeURIComponent(searchTerm)
     actions.copyToClipboard(`brew install ${q}`)
-    spawnchild(q,0)
+    spawnTerminal()
     actions.hideWindow()
   }
 
@@ -51,7 +41,10 @@ const plugin = ({ term, actions, display }) => {
   })
 }
 
-module.exports = {
+export default {
+  name: 'Brew Search',
+  icon,
+  initialize: () => { getSuggestions("") },
   fn: plugin,
   keyword: 'brew'
 }
