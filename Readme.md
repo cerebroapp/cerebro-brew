@@ -11,6 +11,17 @@ In Cerebro, type brew followed by any term, and the Homebrew plugin will show so
 
 <kbd>cmd+c</kbd> - Copy the install command eg. `brew install formula`
 
+Cerebro needs `Acceessibility` access to be able to use the non-executing version when using `Terminal`. You can enable it in `System Preferences > Security & Privacy > Privacy > Accessibility`.
+
+## Settings
+You can change the terminal used by the plugin in the settings.
+The two options are:
+- `Terminal` - Uses the default terminal
+- `iTerm` - Uses iTerm
+
+You can also enable direct execution of the install command in the settings.
+By default, the plugin will open a terminal window with the install command entered.
+
 ## Related
 
 * [Cerebro](https://github.com/cerebroapp/cerebro) – main repo for Cerebro app;
