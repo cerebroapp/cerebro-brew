@@ -58,7 +58,7 @@ const plugin = ({term, actions, display, settings}) => {
     order: order, // High priority
     title: `Search Brew For ${query}`,
     clipboard: `brew install ${query}`,
-    onSelect: () => search(term),
+    onSelect: () => getSuggestions(query).then((results) => results?.length && search(results[0])),
     getPreview: () => <Preview query={query} key={query} search={search}/>
   })
 }
