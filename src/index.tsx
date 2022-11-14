@@ -1,7 +1,7 @@
-import {Preview} from './Preview'
+import { Preview } from './Preview'
 import icon from './icon.png'
-import {exec} from 'node:child_process'
-import {getSuggestions} from "./Preview/getSuggestions";
+import { exec } from 'node:child_process'
+import { getSuggestions } from "./Preview/getSuggestions";
 
 const order = 1
 

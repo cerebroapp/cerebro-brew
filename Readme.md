@@ -3,6 +3,7 @@
 > It is a plugin for [Cerebro app](http://www.cerebroapp.com) that searches for homebrew formulas
 
 ## Usage
+
 In Cerebro, type brew followed by any term, and the Homebrew plugin will show some suggestions:
 ![](screenshot.png)
 

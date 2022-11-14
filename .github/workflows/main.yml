@@ -3,11 +3,11 @@ name: NPM Publish and GitHub Release
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

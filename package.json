@@ -25,7 +25,6 @@
   "scripts": {
     "start": "cerebro-build dev",
     "build": "cerebro-build build",
-    "dev": "yarn build && rm -rf '/Users/christoph.flick/Library/Application Support/Cerebro/plugins/node_modules/cerebro-brew' && mkdir -p '/Users/christoph.flick/Library/Application Support/Cerebro/plugins/node_modules/cerebro-brew/dist' && cp -r ./dist '/Users/christoph.flick/Library/Application Support/Cerebro/plugins/node_modules/cerebro-brew/' && cp ./package.json '/Users/christoph.flick/Library/Application Support/Cerebro/plugins/node_modules/cerebro-brew/package.json'",
     "prepublishOnly": "cerebro-build clear && yarn build"
   },
   "main": "dist/index.js",
@@ -46,5 +45,8 @@
     "@cerebroapp/cerebro-ui": "^2.0.0-alpha.3",
     "fzf": "^0.5.1",
     "memoizee": "^0.4.15"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
